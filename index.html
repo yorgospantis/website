@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Yorgos Pantis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="description" content="Personal webpage of Yorgos Pantis, focusing on Machine Learning and Optimization.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Pacifico&family=Lora:wght@400&family=Indie+Flower&family=Poppins:wght@400;700&family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/css-style.css" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+    <style>
+        body {
+            background-color: black;
+        }
+        
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            color: white;
+        }
+
+        .navbar-toggler {
+            background-color: #333;
+        }
+
+        .navbar-nav .nav-link,
+        .navbar-brand {
+            color: white !important;
+        }
+
+        .fa {
+            font-size: 2em;
+            text-decoration: none;
+        }
+
+        .fa:hover {
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        #home p {
+            margin-top: 4rem;
+        }
+
+        .about-headshot,
+        .about-headshot-mobile {
+            margin-top: 4rem;
+            width: 100%;
+            max-width: 390px;
+            height: auto;
+        }
+
+        .card {
+            background-color: white;
+        }
+
+        #news {
+            font-size: 1em;
+        }
+
+        .content-header {
+            position: relative;
+        }
+
+        .content-header p {
+            font-size: 1.5em;
+            font-weight: bold;
+            display: inline-block;
+            padding-bottom: 0.5em;
+            margin-bottom: 0;
+        }
+
+        .content-header p::after {
+            content: '';
+            display: block;
+            margin: 0.2em 0 auto 0;
+            max-width: 100%;
+            border-bottom: 2px solid #000;
+        }
+
+        .light-bold {
+            font-weight: 500;
+        }
+
+        .footer-text {
+            color: white;
+        }
+
+        .footer-text a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #education {
+            margin-top: 2rem;
+        }
+
+        .link-button {
+            margin: 0.5em 0.5em 0 0;
+            padding: 0.5em 1.5em;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .link-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .bibtex, .abstract {
+        background-color: #333;
+        padding: 1em; /* Increase padding for better appearance */
+        border-radius: 5px;
+        margin: 1em 0;
+        display: none;
+        white-space: pre-line;
+        color: #f1f1f1;
+        font-family: 'Courier New', Courier, monospace;
+        border-left: 5px solid #007bff;
+        width: 80%; /* Default width */
+        max-width: 700px; /* Maximum width on larger screens */
+        line-height: 1.2; /* Adjust line height for readability */
+        font-size: 0.85em; /* Adjust font size as needed */
+        }
+
+        .contact_block {
+            padding: 1rem;
+        }
+
+        /* Additional CSS for Mobile Responsiveness */
+        @media (max-width: 576px) {
+            .contact_block {
+                white-space: normal;
+                padding: 0.5rem;
+            }
+
+            .contact_el {
+                font-size: 1em;
+                margin-bottom: 0.5rem;
+            }
+
+            .navbar {
+                font-size: 0.9em;
+            }
+
+            footer {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <header>
+            <div id="navbar">
+                <nav class="navbar navbar-expand-lg navbar-light border-bottom fixed-top col-11 mx-auto">
+                    <div class="container-fluid">
+                        <button aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarTogglerDemo03" data-bs-toggle="collapse" type="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand me-auto order-0 fancy-button" href="#" id="name-item">
+                            <span id="name-text">Yorgos Pantis</span>
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0 order-1">
+                                <li class="nav-item">
+                                    <a class="nav-link fancy-button" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fancy-button" href="#education">Education</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fancy-button" href="#experience">Experience</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fancy-button" href="#publications">Publications</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fancy-button" href="#honors_awards">Honors & Awards</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fancy-button" href="#service">Service</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fancy-button" href="#contact">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fancy-button" href="files/cv_yorgospantis.pdf" target="_blank">CV</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main class="card col-11 mx-auto" id="main">
+            <div class="row pt-1 m-1">
+                <div class="row info-text">
+                    <div class="col-sm-4 text-center">
+                        <img alt="headshot" class="img-fluid center-block about-headshot" id='portrait' src="images/yorgospantis.JPG">
+                        <p class="h3 pt-sm-3 title-name">Yorgos Pantis</p>
+                        <a class="fa fa-envelope" href="mailto:pantisyorgos@gmail.com" rel="noopener noreferrer" target="_blank"></a>
+                        <a class="fa fa-graduation-cap" href="https://scholar.google.com/citations?user=ts75MY8AAAAJ&hl=en" rel="noopener noreferrer" target="_blank"></a>
+                        <a class="fa fa-github" href="https://github.com/yorgospantis" rel="noopener noreferrer" target="_blank"></a>
+                        <a class="fa fa-linkedin" href="https://www.linkedin.com/in/yorgospantis/" rel="noopener noreferrer" target="_blank"></a>
+                        <a class="fa fa-twitter" href="https://x.com/yorgos_pantis" rel="noopener noreferrer" target="_blank"></a>
+                    </div>
+
+                    <div class="col-sm-8 about-text" id="home">
+                        <p>I currently work at the <a href="https://www.di.uoa.gr/en" target="_blank" rel="noopener noreferrer">National and Kapodistrian University of Athens</a> and <a href="https://archimedesai.gr/en/" target="_blank" rel="noopener noreferrer">Archimedes/Athena RC</a>, focusing on the theory of Machine Learning models. Previously, I have conducted research at <a href="https://www.compute.dtu.dk/" target="_blank" rel="noopener noreferrer">DTU</a> and <a href="https://fel.cvut.cz/en" target="_blank" rel="noopener noreferrer">CTU in Prague</a> in the field of Optimization, and at the <a href="https://www.mis.mpg.de/" target="_blank" rel="noopener noreferrer">Max Planck Institute</a>, where I specialized in Natural Language Processing. I also have a solid statistical and mathematical background acquired through master's and bachelor's studies at the <a href="https://www.stats.ox.ac.uk/" target="_blank" rel="noopener noreferrer">University of Oxford</a> and <a href="https://www.math.upatras.gr/en" target="_blank" rel="noopener noreferrer">Patras</a>. I aim to continue expanding my knowledge and pursue a research career.</p>
+
+                        <div class="row" id="research-interests">
+                            <div class="col">
+                                <ul>
+                                    <li>Machine Learning</li>
+                                    <li>Natural Language Processing</li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <ul>
+                                    <li>Optimization</li>
+                                    <li>Combinatorials</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="container-fluid" id="news">
+                            <h5 id="ID_news">News</h5>
+                            <div class="news-list border">
+                                <ul class="px-3">
+                                    <li><i><span class="light-bold">Nov. 2024</span></i>. I started a Ph.D. in the NKUA in theory-based ML, fully funded by Archimedes/Athena RC under the supervision of Christos Tzamos.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Education Section Start -->
+                <a name="education"></a>
+                <section id="education">
+                    <div class="row content-header">
+                        <div class="col pr-0">
+                            <p>EDUCATION</p>
+                        </div>
+                    </div>
+                    <div class="education">
+                        <ul>
+                            <li><span class="light-bold">Ph.D. in Machine Learning</span> <span class="float-end"><em>Nov. 2024 - Oct. 2028</em></span><br>
+                                <em>National and Kapodistrian University of Athens, Department of Informatics and Telecommunications</em><br>
+                                Ph.D. degree offers me specialized knowledge in Machine Learning, Optimization, and Statistics.
+                                <ul>
+                                    <li>Supervisor: <a href="https://scholar.google.com/citations?user=wB01auEAAAAJ&hl=el" rel="noopener noreferrer" target="_blank">Christos Tzamos</a>.</li>
+                                    <li>Research interests: Theory-based Machine Learning, Optimization, Learning Theory, Combinatorial.</li>
+                                </ul>
+                            </li>
+                            <li><span class="light-bold">M.Sc. in Statistical Science</span> <span class="float-end"><em>Oct. 2020 - Sep. 2021</em></span><br>
+                                <em>University of Oxford, Department of Statistics, Lincoln College</em><br>
+                                Master degree offered me broad high-level training in Statistics and Machine Learning.
+                                <ul>
+                                    <li>Courses: Statistical Machine Learning, Algorithmic Foundations of Learning, Advanced Simulation Methods, Computational Statistics, Applied Statistics, Bayes Methods, Foundations of Statistical Inference, Statistical Programming.</li>
+                                    <li>Thesis: <em>Authorship Attribution in Ancient Greek Texts</em>, co-supervised by <a href="https://scholar.google.com/citations?hl=en&user=DwHtHE8AAAAJ&view_op=list_works" rel="noopener noreferrer" target="_blank">Yannis Assael</a>, <a href="https://scholar.google.co.uk/citations?hl=en&user=EF1FwN4AAAAJ&view_op=list_works" rel="noopener noreferrer" target="_blank">George Deligiannidis</a>, and <a href="https://scholar.google.com/citations?hl=en&user=dUifv5oAAAAJ&view_op=list_works" rel="noopener noreferrer" target="_blank">Thea Sommerschield</a> - Grade: <span class="light-bold">61%</span>.</li>
+                                    <li>Grade: <span class="light-bold">Merit</span>.</li>
+                                </ul>
+                            </li>
+                            <li><span class="light-bold">B.Sc. in Mathematics</span> <span class="float-end"><em>Sep. 2016 - Aug. 2020</em></span><br>
+                                <em>University of Patras, Department of Mathematics</em><br>
+                                Undergraduate degree offered me broad knowledge in a wide range of Mathematics and motivated me to focus on Statistics and Computer Science.
+                                <ul>
+                                    <li>Division of Statistics, Probability Theory & Operational Research.</li>
+                                    <li>Thesis: <em>Mathematical Techniques in Data Science and Machine Learning</em>, under the supervision of <a href="https://scholar.google.com/citations?user=3mQhqcsAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Michael N. Vrahatis</a> - Grade: <span class="light-bold">10.00/10.00</span>.</li>
+                                    <li>Grade: <span class="light-bold">8.90/10.00</span> (Distinction), equivalent to first-class honours (<span class="light-bold">top 1%</span>).</li>
+                                </ul>
+                            </li>
+                            <li><span class="light-bold">Summer School in Economic Networks</span> <span class="float-end"><em>Jul. 2021</em></span><br>
+                                <em>University of Oxford</em><br>
+                                Studied quantitative methods, applications, and impacts of network theory within Economics.
+                            </li>
+                            <li><span class="light-bold">Summer School of Nuclear and Particle Physics</span> <span class="float-end"><em>Jul. 2020</em></span><br>
+                                <em>National Centre for Scientific Research Demokritos</em><br>
+                                Worked on topics of Computer Science, Machine Learning, Nuclear, and Particle Physics - CERN.
+                            </li>
+                            <li><span class="light-bold">Summer School in Python</span> <span class="float-end"><em>Jul. 2019</em></span><br>
+                                <em>University of Patras, Aristotle University of Thessaloniki, Ionian University</em><br>
+                                Intensive summer school on advanced themes of Data Analysis and Machine Learning, using Python.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- Education Section End -->
+
+                <!-- Experience Section Start -->
+                <a name="experience"></a>
+                <section id="experience">
+                    <div class="row content-header">
+                        <div class="col pr-0">
+                            <p>EXPERIENCE</p>
+                        </div>
+                    </div>
+                    <div class="experience">
+                        <ul>
+                            <li><span class="light-bold">Ph.D. Researcher</span> <span class="float-end"><em>Jul. 2024 - Jun. 2028</em></span><br>
+                                <em>Archimedes - AI and Data Science Research Hub and Athena Research & Innovation Center</em><br>
+                                Working on theory based Machine Learning models through Optimization and Statistics under the supervision of <a href="https://scholar.google.com/citations?user=wB01auEAAAAJ&hl=el" rel="noopener noreferrer" target="_blank">Christos Tzamos</a>.
+                            </li>
+                            <li><span class="light-bold">Research Assistant</span> <span class="float-end"><em>Apr. 2024 - Jun. 2024</em></span><br>
+                                <em>Technical University of Denmark, Department of Applied Mathematics and Computer Science</em><br>
+                                Working on Deep Learning theory, with a focus on exploring the generalization properties of overparameterized models through Optimization and Riemannian geometry under the supervision of <a href="https://scholar.google.co.uk/citations?user=sFtJbSUAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Georgios Arvanitidis</a>.
+                            </li>
+                            <li><span class="light-bold">Research Assistant</span> <span class="float-end"><em>Apr. 2023 - Dec. 2023</em></span><br>
+                                <em>Czech Technical University in Prague, Faculty of Electrical Engineering</em><br>
+                                Working on the Mini-batch Stochastic Subgradient Projection method under the supervision of <a href="https://scholar.google.cz/citations?user=Dkp_oGsAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Vyacheslav Kungurtsev</a>, and <a href="https://scholar.google.com/citations?user=Ew8TNsMAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Jakub Mareček</a>.
+                            </li>
+                            <li><span class="light-bold">Research Assistant</span> <span class="float-end"><em>Apr. 2022 - Apr. 2024</em></span><br>
+                                <em>Athena Research & Innovation Center, Department of Institute for the Management of Information Systems</em><br>
+                                Working on the interface of NLP, Privacy, and Security tasks using LLMs under the supervision of <a href="https://scholar.google.com/citations?user=wkHmlysAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Constantinos Patsakis</a>.
+                            </li>
+                            <li><span class="light-bold">Research Assistant</span> <span class="float-end"><em>Oct. 2021 - Mar. 2022</em></span><br>
+                                <em>Max Planck Institute for Mathematics in the Sciences</em><br>
+                                Working on the authorship attribution NLP task with a focus on Plutarch's texts using LLMs under the supervision of <a href="https://scholar.google.com/citations?user=y77r-h4AAAAJ&hl=el" rel="noopener noreferrer" target="_blank">Ivan P. Yamshchikov</a>, and <a href="https://scholar.google.com/citations?user=hoY8se8AAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Jürgen Jost</a>.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- Experience Section End -->
+
+                <!-- Publications Section Start -->
+                <a name="publications"></a>
+                <section id="publications">
+                    <div class="row content-header">
+                        <div class="col pr-0">
+                            <p>PUBLICATIONS</p>
+                        </div>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <span class="light-bold">The Anatomy of Deception: Measuring Technical and Human Factors of a Large-scale Phishing Campaign.</span> Anargyros Chrysanthou, Yorgos Pantis, Constantinos Patsakis. Journal Computers & Security, 2024.
+                                <br>
+                                <div class="link-button" onclick="toggleAbstract('abstract1')">Abstract</div>
+                                <div class="link-button" onclick="window.open('https://www.sciencedirect.com/science/article/abs/pii/S0167404824000816', '_blank')">Paper</div>
+                                <div class="link-button" onclick="toggleBibtex('bibtex1')">BibTeX</div>
+                                <div id="abstract1" class="abstract">
+                                    In an era dominated by digital interactions, phishing campaigns have evolved to exploit not just technological vulnerabilities but also human traits. This study takes an unprecedented deep dive into large-scale phishing campaigns aimed at Meta's users, offering a dual perspective on the technical mechanics and human elements involved. Analysing data from over 25,000 victims worldwide, we highlight the nuances of these campaigns, from the intricate techniques deployed by the attackers to the sentiments and behaviours of those targeted. Unlike prior research conducted in controlled environments, this investigation capitalises on the vast, diverse, and genuine data extracted directly from active phishing campaigns, allowing for a more holistic understanding of the drivers, facilitators, and human factors. Through applying advanced computational techniques, including natural language processing and machine learning, this work unveils critical insights into the psyche of victims and the evolving tactics of modern phishers. Our analysis illustrates very poor password selection choices from the victims, with 30.27% of them picking low-complexity passwords and 58.23% reusing leaked passwords. Additionally, more than 10% exhibit strong persistence in re-victimisation by posting again to the phishing platforms of the same phishers. Finally, we reveal many correlations regarding demographics and the time periods when victims are more vulnerable during the day, as well as analyse the sentiment, emotion, and tone of text responses that they submitted, illustrating how convinced they were of the scam.
+                                </div>
+                                <div id="bibtex1" class="bibtex">
+                                    @article{chrysanthou2024anatomy,<br>
+                                    title={The anatomy of deception: Measuring technical and human factors of a large-scale phishing campaign},<br>
+                                    author={Chrysanthou, Anargyros and Pantis, Yorgos and Patsakis, Constantinos},<br>
+                                    journal={Computers & Security},<br>
+                                    volume={140},<br>
+                                    pages={103780},<br>
+                                    year={2024},<br>
+                                    publisher={Elsevier}<br>
+                                    }
+                                </div>
+                            </li>
+                            <li>
+                                <span class="light-bold">BERT in Plutarch's Shadows.</span> Ivan P. Yamshchikov, Alexey Tikhonov, Yorgos Pantis, Charlotte Schubert and Jürgen Jost. Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing.
+                                <br>
+                                <div class="link-button" onclick="toggleAbstract('abstract2')">Abstract</div>
+                                <div class="link-button" onclick="window.open('https://aclanthology.org/2022.emnlp-main.407.pdf', '_blank')">Paper</div>
+                                <div class="link-button" onclick="window.open('https://huggingface.co/altsoph/bert-base-ancientgreek-uncased', '_blank')">Code</div>
+                                <div class="link-button" onclick="toggleBibtex('bibtex2')">BibTeX</div>
+                                <div id="abstract2" class="abstract">
+                                    The extensive surviving corpus of the ancient scholar Plutarch of Chaeronea (ca. 45-120 CE) also contains several texts which, according to current scholarly opinion, did not originate with him and are therefore attributed to an anonymous author Pseudo-Plutarch. These include, in particular, the work Placita Philosophorum (Quotations and Opinions of the Ancient Philosophers), which is extremely important for the history of ancient philosophy. Little is known about the identity of that anonymous author and its relation to other authors from the same period. This paper presents a BERT language model for Ancient Greek. The model discovers previously unknown statistical properties relevant to these literary, philosophical, and historical problems and can shed new light on this authorship question. In particular, the Placita Philosophorum, together with one of the other Pseudo-Plutarch texts, shows similarities with the texts written by authors from an Alexandrian context (2nd/3rd century CE).
+                                </div>
+                                <div id="bibtex2" class="bibtex">
+                                    @inproceedings{yamshchikov2022bert,<br>
+                                    title={BERT in Plutarch’s Shadows},<br>
+                                    author={Yamshchikov, Ivan and Tikhonov, Alexey and Pantis, Yorgos and Schubert, Charlotte and Jost, J{\"u}rgen},<br>
+                                    booktitle={Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing},<br>
+                                    pages={6071--6080},<br>
+                                    year={2022}<br>
+                                    }
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- Publications Section End -->
+
+                <!-- Honors & Awards Section Start -->
+                <a name="honors_awards"></a>
+                <section id="honors_awards">
+                    <div class="row content-header">
+                        <div class="col pr-0">
+                            <p>HONORS & AWARDS</p>
+                        </div>
+                    </div>
+                    <div class="honors-awards">
+                        <ul>
+                            <li><span class="light-bold">4-year full scholarship</span> <span class="float-end"><em>Jul. 2024 - Jun. 2028</em></span><br>
+                                <em>Archimedes - AI and Data Science Research Hub</em><br>
+                                In support of my doctoral studies due to my background.
+                            </li>
+                            <li><span class="light-bold">Full annual scholarship</span> <span class="float-end"><em>Oct. 2020 - Aug. 2021</em></span><br>
+                                <em>Bodossaki Foundation</em><br>
+                                In support of my master's studies due to my bachelor performance.
+                            </li>
+                            <li><span class="light-bold">Covid-19 assistance fund</span> <span class="float-end"><em>Jun. 2021</em></span><br>
+                                <em>University of Oxford, Lincoln College</em><br>
+                                In support of my master's studies.
+                            </li>
+                            <li><span class="light-bold">Vivian Green student assistance scholarship</span> <span class="float-end"><em>Feb. 2021</em></span><br>
+                                <em>University of Oxford, Lincoln College</em><br>
+                                In support of my master's studies.
+                            </li>
+                            <li><span class="light-bold">4-year annual scholarship</span> <span class="float-end"><em>Every Sept. 2016 - 2020</em></span><br>
+                                <em>Greek State Scholarships Foundation</em><br>
+                                In support of my bachelor studies due to my bachelor performance.
+                            </li>
+                            <li><span class="light-bold">4-year consistently at top 1%</span> <span class="float-end"><em>Every Sept. 2016 - 2020</em></span><br>
+                                <em>University of Patras, Department of Mathematics</em><br>
+                                Classified in the top-tier of my class for the duration of my bachelor studies.
+                            </li>
+                            <li><span class="light-bold">Ranked second among admitted students</span> <span class="float-end"><em>Sept. 2016</em></span><br>
+                                <em>University of Patras, Department of Mathematics</em><br>
+                                Second place among accepted candidates for the bachelor's degree program.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- Honors & Awards Section End -->
+
+                <!-- Service Section Start -->
+                <section id="service">
+                    <div class="row content-header">
+                        <div class="col pr-0">
+                            <p>SERVICE</p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <p>Reviewer:</p>
+                        <ul>
+                            <li>ICLR 2025</li>
+                            <li>ICML 2025</li>
+                        </ul>
+                        <p>Volunteer:</p>
+                        <ul>
+                            <li><em>University of Oxford, Lincoln College <span class="float-end">Sept. 2022 - Present</span></em><br>
+                                Mentor undergraduate and graduate students by providing guidance on their current studies, CV preparation, and applications for graduate programs or industry opportunities.
+                            </li>
+                            <li><em>Library, University of Patras <span class="float-end">Sept. 2019 - Aug. 2020</span></em><br>
+                                Edited digital documents and transcribed handwritten notes to support higher education students with disabilities, including blindness, dyslexia, and other learning challenges.
+                            </li>
+                            <li><em>National Technical University of Athens <span class="float-end">Oct. 2019</span></em><br>
+                                Engaged with the public to explain scientific concepts and advised high school students on selecting universities that align with their interests and goals.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- Service Section End -->
+
+                <!-- Contact Section Start -->
+                <a name="contact"></a>
+                <section id="contact">
+                    <div class="row content-header">
+                        <div class="col pr-0">
+                            <p>CONTACT</p>
+                        </div>
+                    </div>
+                    <div class="contact_block">
+                        <div class="row contact_el">Yorgos Pantis</div>
+                        <div class="row contact_el">Ph.D. student</div>
+                        <div class="row contact_el">Archimedes/Athena RC</div>
+                        <div class="row contact_el">Department of Informatics and Telecommunications, National and Kapodistrian University of Athens</div>
+                        <div class="row contact_el"><span class="light-bold">Email:</span> last_namefirst_name@gmail.com</div>
+                        <div class="row contact_el"><span class="light-bold">Location:</span></div>
+                        <ul class="location_details">
+                            <li>Department of Informatics and Telecommunications</li>
+                            <li>National and Kapodistrian University of Athens, Panepistimioupolis, Ilissia, GR-15784 Athens, Greece</li>
+                        </ul>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12581.541160873434!2d23.7665108!3d37.9681368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9e1a1dd511c44165!2sDepartment%20of%20Informatics%20and%20Telecommunications!5e0!3m2!1sen!2sgr!4v1652990436875!5m2!1sen!2sgr" style="border:0; width: 100%; max-width: 400px; height: 350px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </section>
+                <!-- Contact Section End -->
+            </div>
+        </main>
+
+        <footer class="footer-text">
+            <div class="container-fluid p-0 m-0">
+                <div class="row no-gutters text-center d-flex justify-content-center m-0">
+                    <div class="p-2">
+                        <p class="text-center">© 2024 Yorgos Pantis — Last Update: January, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function toggleBibtex(id) {
+            var bibtex = document.getElementById(id);
+            if (bibtex.style.display === "none" || bibtex.style.display === "") {
+                bibtex.style.display = "block";
+            } else {
+                bibtex.style.display = "none";
+            }
+        }
+
+        function toggleAbstract(id) {
+            var abstract = document.getElementById(id);
+            if (abstract.style.display === "none" || abstract.style.display === "") {
+                abstract.style.display = "block";
+            } else {
+                abstract.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
