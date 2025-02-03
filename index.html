@@ -1,73 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Yorgos Pantis</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Pacifico&family=Lora:wght@400&family=Indie+Flower&family=Poppins:wght@400;700&family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
-    <style>
-        /* Additional styles if needed */
-    </style>
+    <!-- Your existing head elements -->
+    <script>
+        function loadSection(id, file) {
+            const element = document.getElementById(id);
+            fetch(file)
+                .then(response => response.text())
+                .then(data => element.innerHTML = data);
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSection('education', 'sections/education.html');
+            loadSection('experience', 'sections/experience.html');
+            loadSection('publications', 'sections/publications.html');
+            // Load other sections in a similar manner
+        });
+    </script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light border-bottom fixed-top col-11 mx-auto">
-            <div class="container-fluid">
-                <button aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarTogglerDemo03" data-bs-toggle="collapse" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand me-auto order-0 fancy-button" href="#">Yorgos Pantis</a>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0 order-1">
-                        <li class="nav-item"><a class="nav-link fancy-button" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link fancy-button" href="#education">Education</a></li>
-                        <li class="nav-item"><a class="nav-link fancy-button" href="#experience">Experience</a></li>
-                        <li class="nav-item"><a class="nav-link fancy-button" href="#publications">Publications</a></li>
-                        <li class="nav-item"><a class="nav-link fancy-button" href="#honors_awards">Honors & Awards</a></li>
-                        <li class="nav-item"><a class="nav-link fancy-button" href="#service">Service</a></li>
-                        <li class="nav-item"><a class="nav-link fancy-button" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link fancy-button" href="files/cv_yorgospantis.pdf" target="_blank">CV</a></li>
-                    </ul>
+    <div id="outer">
+        <header>
+            <!-- Your header code -->
+        </header>
+
+        <main class="card col-11 mx-auto" id="main">
+            <div class="row pt-1 m-1">
+                <!-- Main Content -->
+                <div class="row info-text">
+                    <!-- Your existing info-text code -->
                 </div>
+                
+                <!-- Sections will be loaded here -->
+                <div id="education"></div>
+                <div id="experience"></div>
+                <div id="publications"></div>
+                <!-- More sections can be loaded similarly -->
             </div>
-        </nav>
-    </header>
+        </main>
 
-    <main class="card col-11 mx-auto" id="main">
-        <!-- Sections are embedded here -->
-        <div id="home">
-            <?php include 'sections/home.html'; ?>
-        </div>
-        <div id="education">
-            <?php include 'sections/education.html'; ?>
-        </div>
-        <div id="experience">
-            <?php include 'sections/experience.html'; ?>
-        </div>
-        <div id="publications">
-            <?php include 'sections/publications.html'; ?>
-        </div>
-        <div id="honors_awards">
-            <?php include 'sections/honors_awards.html'; ?>
-        </div>
-        <div id="service">
-            <?php include 'sections/service.html'; ?>
-        </div>
-        <div id="contact">
-            <?php include 'sections/contact.html'; ?>
-        </div>
-    </main>
-
-    <footer>
-        <p>© 2024 Yorgos Pantis — Last Update: January, 2025</p>
-    </footer>
+        <footer class="footer-text">
+            <!-- Your footer code -->
+        </footer>
+    </div>
+    <script>
+        // Existing JavaScript functions
+    </script>
 </body>
 </html>
