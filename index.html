@@ -72,8 +72,52 @@
         }
 
         #news {
-            font-size: 1em;
+    background-color: #f8f9fa; /* Light background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        
+        #ID_news {
+            font-family: 'Arial', sans-serif;
+            color: #343a40;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .news-list {
+            max-height: 200px; /* Make the list scrollable */
+            overflow-y: auto; /* Add vertical scroll */
+            padding-right: 15px;
+        }
+        
+        .news-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .news-list li {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            transition: background-color 0.3s, transform 0.2s; /* Fancy hover effect */
+        }
+        
+        .news-list li:hover {
+            background-color: #e9ecef; /* Light highlight on hover */
+            transform: translateX(5px); /* Slight shift effect */
+        }
+        
+        .news-list li i {
+            color: #6c757d;
+        }
+        
+        .light-bold {
+            font-weight: bold;
+        }
+
 
         .content-header {
             position: relative;
@@ -253,6 +297,8 @@
                             <div class="news-list border">
                                 <ul class="px-3">
                                     <li><i><span class="light-bold">Nov. 2024</span></i>. I started a Ph.D. in the NKUA in theory-based ML, fully funded by Archimedes/Athena RC under the supervision of Christos Tzamos.</li>
+                                    <li><i><span class="light-bold">Dec. 2024</span></i>. Completed my first major paper on ML theory, to be presented at NeurIPS.</li>
+                                    <!-- Add more news items as needed -->
                                 </ul>
                             </div>
                         </div>
