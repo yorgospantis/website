@@ -19,65 +19,62 @@
             background-color: black;
             font-family: 'Poppins', sans-serif;
         }
+        
+.navbar {
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.85), rgba(40, 40, 40, 0.85));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
 
-        .navbar {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(25, 25, 25, 0.8));
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 12px 20px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease-in-out;
-        }
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
 
-        .navbar-brand {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #fff !important;
-            transition: transform 0.3s ease-in-out;
-        }
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white !important;
+    transition: transform 0.3s ease-in-out;
+}
 
-        .navbar-brand:hover {
-            transform: scale(1.1);
-        }
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
 
-        .navbar-nav .nav-link {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.8) !important;
-            margin: 0 10px;
-            transition: all 0.3s ease-in-out;
-            position: relative;
-        }
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin: 0 12px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
 
-        .navbar-nav .nav-link:hover {
-            color: #fff !important;
-            transform: translateY(-2px);
-        }
+.navbar-nav .nav-link:hover {
+    color: white !important;
+    transform: translateY(-2px);
+}
 
-        .navbar-nav .nav-link::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: #ffcc00;
-            transition: width 0.3s;
-            position: absolute;
-            left: 50%;
-            bottom: -5px;
-            transform: translateX(-50%);
-        }
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffcc00;
+    transition: width 0.3s;
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    transform: translateX(-50%);
+}
 
-        .navbar-nav .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .navbar-toggler {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-        }
-
-        .navbar-toggler-icon {
-            filter: invert(1);
-        }
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+        
     </style>
 </head>
 <body>
