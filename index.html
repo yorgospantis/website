@@ -31,37 +31,67 @@
     border-radius: 10px;
         }
         
+        .navbar {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+        }
+        
+        .navbar:hover {
+            background: rgba(0, 0, 0, 0.75);
+        }
+        
         .navbar-toggler {
-            background-color: #444;
+            background-color: #555;
             border: none;
-            transition: all 0.3s ease-in-out;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: background 0.3s ease-in-out;
         }
         
         .navbar-toggler:hover {
-            background-color: #666;
+            background-color: #777;
         }
         
         .navbar-nav .nav-link,
         .navbar-brand {
             color: white !important;
+            font-size: 1.1rem;
             font-weight: 500;
-            letter-spacing: 0.05em;
-            transition: color 0.3s ease-in-out;
+            padding: 0.5rem 1rem;
+            position: relative;
+            transition: all 0.3s ease-in-out;
         }
         
-        .navbar-nav .nav-link:hover,
-        .navbar-brand:hover {
-            color: #f8b400 !important;
+        .navbar-nav .nav-link::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #f8b400;
+            transition: width 0.3s ease-in-out;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
         }
         
         .fa {
             font-size: 2em;
-            text-decoration: none;
             transition: transform 0.3s ease-in-out;
         }
         
         .fa:hover {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
         
         a {
@@ -72,22 +102,10 @@
             text-decoration: none;
         }
         
-        #home p {
-            margin-top: 4rem;
-        }
-        
-        .about-headshot,
-        .about-headshot-mobile {
-            margin-top: 4rem;
-            width: 100%;
-            max-width: 390px;
-            height: auto;
-        }
-        
         .card {
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         
         #news {
