@@ -8,7 +8,7 @@ html {
 }
 
 .about-headshot {
-    max-width: 200px;  /* Smaller size for the image */
+    max-width: 500px;  /* Smaller size for the image */
     height: auto;
 }
 
