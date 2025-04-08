@@ -188,21 +188,13 @@ a:hover {
     display: none;
     color: #333;
     font-family: 'Courier New', Courier, monospace;
-    border-left: 6px solid;
+    border-left: 6px solid #007bff;
     width: 90%;
     max-width: 700px;
     line-height: 1.5;
     font-size: 0.95em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
-}
-
-.bibtex {
-    border-left-color: #333;
-}
-
-.abstract {
-    border-left-color: #333;
 }
 
 .contact_block {
