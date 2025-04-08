@@ -8,7 +8,7 @@ html {
 }
 
 .about-headshot {
-    max-width: 150px;  /* Adjust to desired size, e.g., 150px */
+    max-width: 100px;  /* Smaller size for the image */
     height: auto;
     border-radius: 50%; /* Optional: Circular effect */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
