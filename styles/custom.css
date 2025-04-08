@@ -7,11 +7,6 @@ html {
     scroll-padding-top: 80px;
 }
 
-.about-headshot {
-    max-width: 500px;  /* Smaller size for the image */
-    height: auto;
-}
-
 .navbar {
     background: rgba(100, 100, 100, 0.6);
     backdrop-filter: blur(12px);
