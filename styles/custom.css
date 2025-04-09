@@ -62,29 +62,16 @@ html {
 }
 
 .fa {
-    font-size: 5em;  /* Increase size of icons */
+    font-size: 2.5em;  /* Increase size of icons */
     transition: transform 0.3s ease-in-out;
-    text-decoration: none;  /* Ensure no underline */
 }
 
 .fa:hover {
     transform: scale(1.15);
 }
 
-a.fa {
-    text-decoration: none !important;  /* Remove underline specifically from font-awesome icons */
-}
-
-a.fa:hover {
-    text-decoration: none !important;  /* Maintain no underline on hover */
-}
-
 a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
+    text-decoration: none !important;  /* Remove underline from all links */
 }
 
 .card {
@@ -166,7 +153,6 @@ a:hover {
 
 .footer-text a {
     color: white;
-    text-decoration: none;
 }
 
 .link-button {
