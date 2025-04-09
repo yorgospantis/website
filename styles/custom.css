@@ -62,12 +62,21 @@ html {
 }
 
 .fa {
-    font-size: 2em;
+    font-size: 2.5em;  /* Increase size of icons */
     transition: transform 0.3s ease-in-out;
+    text-decoration: none;  /* Ensure no underline */
 }
 
 .fa:hover {
     transform: scale(1.15);
+}
+
+a.fa {
+    text-decoration: none !important;  /* Remove underline specifically from font-awesome icons */
+}
+
+a.fa:hover {
+    text-decoration: none !important;  /* Maintain no underline on hover */
 }
 
 a {
