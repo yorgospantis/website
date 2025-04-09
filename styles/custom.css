@@ -62,7 +62,7 @@ html {
 }
 
 .fa {
-    font-size: 2.5em;  /* Increase size of icons */
+    font-size: 5em;  /* Increase size of icons */
     transition: transform 0.3s ease-in-out;
     text-decoration: none;  /* Ensure no underline */
 }
