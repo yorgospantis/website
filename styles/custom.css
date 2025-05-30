@@ -3,6 +3,18 @@ body {
     padding-top: 67px;
 }
 
+.social-icon {
+    font-size: 1.5rem;
+    margin: 0 0.4rem;
+    color: #333;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    color: #1da1f2; /* Twitter/X blue */
+    transform: scale(1.2);
+}
+
 html {
     scroll-padding-top: 80px;
 }
