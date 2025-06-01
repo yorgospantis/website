@@ -61,10 +61,12 @@ html {
     width: 100%;
 }
 
-.fa {
-    font-size: 2.5em;  /* Increase size of icons */
+
+.fa, .fab, .fas {
+    font-size: 4em;  /* Increase size of icons */
     transition: transform 0.3s ease-in-out;
 }
+
 
 .fab {
     font-family: 'Font Awesome 6 Brands';
