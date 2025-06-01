@@ -66,6 +66,10 @@ html {
     transition: transform 0.3s ease-in-out;
 }
 
+.fab {
+    font-family: 'Font Awesome 6 Brands';
+}
+
 .fa:hover {
     transform: scale(1.15);
 }
