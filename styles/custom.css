@@ -63,7 +63,7 @@ html {
 
 
 .fa, .fab, .fas {
-    font-size: 1em;  /* Increase size of icons */
+    font-size: 2em;  /* Increase size of icons */
     transition: transform 0.3s ease-in-out;
 }
 
