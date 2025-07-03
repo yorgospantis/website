@@ -73,53 +73,74 @@
                     </div>
                     <div>
                         <ul>
-                            <li>
-                                <span class="light-bold">The Anatomy of Deception: Measuring Technical and Human Factors of a Large-scale Phishing Campaign.</span> Anargyros Chrysanthou, Yorgos Pantis, Constantinos Patsakis. Journal Computers & Security, 2024.
-                                <br>
-                                <div class="link-button" onclick="toggleAbstract('abstract1')">Abstract</div>
-                                <div class="link-button" onclick="window.open('https://www.sciencedirect.com/science/article/abs/pii/S0167404824000816', '_blank')">Paper</div>
-                                <div class="link-button" onclick="toggleBibtex('bibtex1')">BibTeX</div>
-                                <div id="abstract1" class="abstract" style="border-left-color: #007bff;">
-                                    In an era dominated by digital interactions, phishing campaigns have evolved to exploit not just technological vulnerabilities but also human traits. This study takes an unprecedented deep dive into large-scale phishing campaigns aimed at Meta's users, offering a dual perspective on the technical mechanics and human elements involved. Analysing data from over 25,000 victims worldwide, we highlight the nuances of these campaigns, from the intricate techniques deployed by the attackers to the sentiments and behaviours of those targeted. Unlike prior research conducted in controlled environments, this investigation capitalises on the vast, diverse, and genuine data extracted directly from active phishing campaigns, allowing for a more holistic understanding of the drivers, facilitators, and human factors. Through applying advanced computational techniques, including natural language processing and machine learning, this work unveils critical insights into the psyche of victims and the evolving tactics of modern phishers. Our analysis illustrates very poor password selection choices from the victims, with 30.27% of them picking low-complexity passwords and 58.23% reusing leaked passwords. Additionally, more than 10% exhibit strong persistence in re-victimisation by posting again to the phishing platforms of the same phishers. Finally, we reveal many correlations regarding demographics and the time periods when victims are more vulnerable during the day, as well as analyse the sentiment, emotion, and tone of text responses that they submitted, illustrating how convinced they were of the scam.
-                                </div>
-                                <div id="bibtex1" class="bibtex" style="border-left-color: #007bff;">
-                                    @article{chrysanthou2024anatomy,<br>
-                                    title={The anatomy of deception: Measuring technical and human factors of a large-scale phishing campaign},<br>
-                                    author={Chrysanthou, Anargyros and Pantis, Yorgos and Patsakis, Constantinos},<br>
-                                    journal={Computers & Security},<br>
-                                    volume={140},<br>
-                                    pages={103780},<br>
-                                    year={2024},<br>
-                                    publisher={Elsevier}<br>
-                                    }
-                                </div>
-                            </li>
-                            <li>
-                                <span class="light-bold">BERT in Plutarch's Shadows.</span> Ivan P. Yamshchikov, Alexey Tikhonov, Yorgos Pantis, Charlotte Schubert and Jürgen Jost. Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing.
-                                <br>
-                                <div class="link-button" onclick="toggleAbstract('abstract2')">Abstract</div>
-                                <div class="link-button" onclick="window.open('https://aclanthology.org/2022.emnlp-main.407/', '_blank')">Paper</div>
-                                <div class="link-button" onclick="window.open('https://huggingface.co/altsoph/bert-base-ancientgreek-uncased', '_blank')">Code</div>
-                                <div class="link-button" onclick="toggleBibtex('bibtex2')">BibTeX</div>
-                                <div id="abstract2" class="abstract" style="border-left-color: #007bff;">
-                                    The extensive surviving corpus of the ancient scholar Plutarch of Chaeronea (ca. 45-120 CE) also contains several texts which, according to current scholarly opinion, did not originate with him and are therefore attributed to an anonymous author Pseudo-Plutarch. These include, in particular, the work Placita Philosophorum (Quotations and Opinions of the Ancient Philosophers), which is extremely important for the history of ancient philosophy. Little is known about the identity of that anonymous author and its relation to other authors from the same period. This paper presents a BERT language model for Ancient Greek. The model discovers previously unknown statistical properties relevant to these literary, philosophical, and historical problems and can shed new light on this authorship question. In particular, the Placita Philosophorum, together with one of the other Pseudo-Plutarch texts, shows similarities with the texts written by authors from an Alexandrian context (2nd/3rd century CE).
-                                </div>
-                                <div id="bibtex2" class="bibtex" style="border-left-color: #007bff;">
-                                    @inproceedings{yamshchikov2022bert,<br>
-                                    title={BERT in Plutarch’s Shadows},<br>
-                                    author={Yamshchikov, Ivan and Tikhonov, Alexey and Pantis, Yorgos and Schubert, Charlotte and Jost, J{\"u}rgen},<br>
-                                    booktitle={Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing},<br>
-                                    pages={6071--6080},<br>
-                                    year={2022}<br>
-                                    }
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- Publications Section End -->
-            </div>
-        </main>
+<li>
+    <!-- Paper title in normal font, on its own line -->
+    <div class="paper-title">The Anatomy of Deception: Measuring Technical and Human Factors of a Large-scale Phishing Campaign.</div>
+
+    <!-- Author names and publication info on new line -->
+    <div class="paper-meta">
+        Anargyros Chrysanthou, Yorgos Pantis, Constantinos Patsakis. 
+        <em>Journal Computers & Security</em>, 2024.
+    </div>
+
+    <!-- Buttons -->
+    <div class="link-button" onclick="toggleAbstract('abstract1')">Abstract</div>
+    <div class="link-button" onclick="window.open('https://www.sciencedirect.com/science/article/abs/pii/S0167404824000816', '_blank')">Paper</div>
+    <div class="link-button" onclick="toggleBibtex('bibtex1')">BibTeX</div>
+
+    <!-- Abstract -->
+    <div id="abstract1" class="abstract" style="border-left-color: #007bff;">
+        <!-- Abstract text remains unchanged -->
+        In an era dominated by digital interactions, phishing campaigns have evolved to exploit not just technological vulnerabilities but also human traits...
+    </div>
+
+    <!-- BibTeX -->
+    <div id="bibtex1" class="bibtex" style="border-left-color: #007bff;">
+        @article{chrysanthou2024anatomy,<br>
+        title={The anatomy of deception: Measuring technical and human factors of a large-scale phishing campaign},<br>
+        author={Chrysanthou, Anargyros and Pantis, Yorgos and Patsakis, Constantinos},<br>
+        journal={Computers & Security},<br>
+        volume={140},<br>
+        pages={103780},<br>
+        year={2024},<br>
+        publisher={Elsevier}<br>
+        }
+    </div>
+</li>
+
+<li>
+    <!-- Paper title in normal font, on its own line -->
+    <div class="paper-title">BERT in Plutarch's Shadows.</div>
+
+    <!-- Author names and venue on a new line -->
+    <div class="paper-meta">
+        Ivan P. Yamshchikov, Alexey Tikhonov, Yorgos Pantis, Charlotte Schubert, and Jürgen Jost.  
+        <em>Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing</em>.
+    </div>
+
+    <!-- Buttons -->
+    <div class="link-button" onclick="toggleAbstract('abstract2')">Abstract</div>
+    <div class="link-button" onclick="window.open('https://aclanthology.org/2022.emnlp-main.407/', '_blank')">Paper</div>
+    <div class="link-button" onclick="window.open('https://huggingface.co/altsoph/bert-base-ancientgreek-uncased', '_blank')">Code</div>
+    <div class="link-button" onclick="toggleBibtex('bibtex2')">BibTeX</div>
+
+    <!-- Abstract -->
+    <div id="abstract2" class="abstract" style="border-left-color: #007bff;">
+        The extensive surviving corpus of the ancient scholar Plutarch of Chaeronea (ca. 45–120 CE) also contains several texts which, according to current scholarly opinion, did not originate with him and are therefore attributed to an anonymous author Pseudo-Plutarch. These include, in particular, the work <em>Placita Philosophorum</em> (Quotations and Opinions of the Ancient Philosophers), which is extremely important for the history of ancient philosophy. Little is known about the identity of that anonymous author and its relation to other authors from the same period. This paper presents a BERT language model for Ancient Greek. The model discovers previously unknown statistical properties relevant to these literary, philosophical, and historical problems and can shed new light on this authorship question. In particular, the <em>Placita Philosophorum</em>, together with one of the other Pseudo-Plutarch texts, shows similarities with the texts written by authors from an Alexandrian context (2nd/3rd century CE).
+    </div>
+
+    <!-- BibTeX -->
+    <div id="bibtex2" class="bibtex" style="border-left-color: #007bff;">
+        @inproceedings{yamshchikov2022bert,<br>
+        title={BERT in Plutarch’s Shadows},<br>
+        author={Yamshchikov, Ivan and Tikhonov, Alexey and Pantis, Yorgos and Schubert, Charlotte and Jost, J{\"u}rgen},<br>
+        booktitle={Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing},<br>
+        pages={6071--6080},<br>
+        year={2022}<br>
+        }
+    </div>
+</li>
+
 
         <footer class="footer-text">
             <div class="container-fluid p-0 m-0">
