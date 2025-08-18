@@ -1,9 +1,7 @@
 body {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: black;
     padding-top: 67px;
 }
-
 
 html {
     scroll-padding-top: 80px;
@@ -228,25 +226,5 @@ a {
     opacity: 0.8;
     transform: scale(1.05);
     transition: 0.3s ease-in-out;
-}
-
-
-#portrait {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (max-width: 768px) {
-    #main .row {
-        display: block;
-    }
-    #main .col-sm-4,
-    #main .col-sm-8 {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
 }
 
