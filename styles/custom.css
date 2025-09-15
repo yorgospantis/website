@@ -202,35 +202,25 @@ a {
     padding: 1rem;
 }
 
-/* Portrait image max sizing */
-#portrait {
-    max-width: 280px;
-}
-
-/* Tablet & below adjustments */
-@media (max-width: 991px) {
-    #portrait {
-        max-width: 220px;
-        margin-bottom: 1rem;
-    }
-    .title-name {
-        font-size: 1.6rem;
-    }
-}
-
-/* Phone adjustments */
 @media (max-width: 576px) {
-    #portrait {
-        max-width: 160px;
+    .contact_block {
+        white-space: normal;
+        padding: 0.5rem;
     }
-    .title-name {
-        font-size: 1.4rem;
+
+    .contact_el {
+        font-size: 1em;
+        margin-bottom: 0.5rem;
     }
+
     .navbar {
-        font-size: 0.9rem;
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.8em;
     }
 }
-
 
 .card ul li img:hover {
     opacity: 0.8;
