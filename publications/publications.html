@@ -50,82 +50,95 @@
         <main class="card col-20 mx-auto" id="main">
             <div class="row pt-1 m-1">
                 <!-- Publications Section Start -->
-                <section id="publications">
-                    <div class="row content-header">
-                        <div class="col pr-0">
-                            <p>Publications</p>
-                        </div>
-                    </div>
-                    <div>
-                        <ul>
-                            <!-- NeurIPS 2025 -->
-                            <li>
-                                <div class="light-bold">Teaching Transformers to Solve Combinatorial Problems through Efficient Trial & Error.</div>
-                                <div>Panagiotis Giannoulis, Yorgos Pantis, Christos Tzamos. <i>Proceedings of the 39th Annual Conference on Neural Information Processing Systems (NeurIPS 2025)</i>.</div>
-                                <div class="link-button" onclick="toggleAbstract('abstract-neurips')">Abstract</div>
-                                <div class="link-button" onclick="window.open('https://arxiv.org/abs/2509.22023', '_blank')">Paper</div>
-                                <div class="link-button" onclick="toggleBibtex('bibtex-neurips')">BibTeX</div>
-                                <div id="abstract-neurips" class="abstract" style="display:none; border-left-color:#007bff;">
-                                    Despite their proficiency in various language tasks, Large Language Models (LLMs) struggle with combinatorial problems like Satisfiability, Traveling Salesman Problem, or even basic arithmetic. We address this gap through a novel approach for solving problems in the class NP. We focus on the paradigmatic task of Sudoku and achieve state-of-the-art accuracy (99%) compared to prior neuro-symbolic approaches. Unlike prior work that used custom architectures, our method employs a vanilla decoder-only Transformer (GPT-2) without external tools or function calling. Our method integrates imitation learning of simple Sudoku rules with an explicit Depth-First Search (DFS) exploration strategy involving informed guessing and backtracking. Moving beyond imitation learning, we seek to minimize the number of guesses until reaching a solution. We provide a rigorous analysis of this setup formalizing its connection to a contextual variant of Min-Sum Set Cover, a well-studied problem in algorithms and stochastic optimization.
-                                </div>
-                                <div id="bibtex-neurips" class="bibtex" style="display:none; border-left-color:#007bff;">
-                                    @inproceedings{giannoulis2025teaching,<br>
-                                    title={Teaching Transformers to Solve Combinatorial Problems through Efficient Trial & Error},<br>
-                                    author={Giannoulis, Panagiotis and Pantis, Yorgos and Tzamos, Christos},<br>
-                                    booktitle={Proceedings of the Thirty-ninth Annual Conference on Neural Information Processing Systems},<br>
-                                    year={2025}<br>
-                                    }
-                                </div>
-                            </li>
+<section id="publications">
+    <div class="row content-header">
+        <div class="col pr-0">
+            <p>Publications</p>
+        </div>
+    </div>
+    <div class="mb-3" style="font-style: italic; margin-left: -0.2cm;">
+        C: Conference &emsp; J: Journal &emsp; &dagger;: equal contribution.
+    </div>
+    <div>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <!-- C2† -->
+            <li>
+                <span class="pub-label">C<sub>2</sub><sup>&dagger;</sup></span>
+                <div class="light-bold d-inline">
+                    &nbsp;<em>Teaching Transformers to Solve Combinatorial Problems through Efficient Trial &amp; Error.</em>
+                </div>
+                <div>Panagiotis Giannoulis, Yorgos Pantis, Christos Tzamos. <i>NeurIPS 2025</i>.
+                    <a href="https://arxiv.org/abs/2509.22023" target="_blank">[Paper]</a>
+                </div>
+                <div class="link-button" onclick="toggleAbstract('abstract-neurips')">Abstract</div>
+                <div class="link-button" onclick="toggleBibtex('bibtex-neurips')">BibTeX</div>
+                <div id="abstract-neurips" class="abstract" style="display:none; border-left-color:#007bff;">
+                    Despite their proficiency in various language tasks, Large Language Models (LLMs) struggle with combinatorial problems like Satisfiability, Traveling Salesman Problem, or even basic arithmetic. We address this gap through a novel approach for solving problems in the class NP. We focus on the paradigmatic task of Sudoku and achieve state-of-the-art accuracy (99%) compared to prior neuro-symbolic approaches. Unlike prior work that used custom architectures, our method employs a vanilla decoder-only Transformer (GPT-2) without external tools or function calling. Our method integrates imitation learning of simple Sudoku rules with an explicit Depth-First Search (DFS) exploration strategy involving informed guessing and backtracking. Moving beyond imitation learning, we seek to minimize the number of guesses until reaching a solution. We provide a rigorous analysis of this setup formalizing its connection to a contextual variant of Min-Sum Set Cover, a well-studied problem in algorithms and stochastic optimization.
+                </div>
+                <div id="bibtex-neurips" class="bibtex" style="display:none; border-left-color:#007bff;">
+                    @inproceedings{giannoulis2025teaching,<br>
+                    title={Teaching Transformers to Solve Combinatorial Problems through Efficient Trial & Error},<br>
+                    author={Giannoulis, Panagiotis and Pantis, Yorgos and Tzamos, Christos},<br>
+                    booktitle={Proceedings of the Thirty-ninth Annual Conference on Neural Information Processing Systems},<br>
+                    year={2025}<br>
+                    }
+                </div>
+            </li>
 
-                            <!-- Computers & Security 2024 -->
-                            <li>
-                                <div class="light-bold">The Anatomy of Deception: Measuring Technical and Human Factors of a Large-scale Phishing Campaign.</div>
-                                <div>Anargyros Chrysanthou, Yorgos Pantis, Constantinos Patsakis. <i>Journal Computers & Security</i>, 2024.</div>
-                                <div class="link-button" onclick="toggleAbstract('abstract-phishing')">Abstract</div>
-                                <div class="link-button" onclick="window.open('https://www.sciencedirect.com/science/article/abs/pii/S0167404824000816', '_blank')">Paper</div>
-                                <div class="link-button" onclick="toggleBibtex('bibtex-phishing')">BibTeX</div>
-                                <div id="abstract-phishing" class="abstract" style="display:none; border-left-color:#007bff;">
-                                    In an era dominated by digital interactions, phishing campaigns have evolved to exploit not just technological vulnerabilities but also human traits. This study takes an unprecedented deep dive into large-scale phishing campaigns aimed at Meta's users, offering a dual perspective on the technical mechanics and human elements involved. Analysing data from over 25,000 victims worldwide, we highlight the nuances of these campaigns, from the intricate techniques deployed by the attackers to the sentiments and behaviours of those targeted. Unlike prior research conducted in controlled environments, this investigation capitalises on the vast, diverse, and genuine data extracted directly from active phishing campaigns, allowing for a more holistic understanding of the drivers, facilitators, and human factors. Through applying advanced computational techniques, including natural language processing and machine learning, this work unveils critical insights into the psyche of victims and the evolving tactics of modern phishers. Our analysis illustrates very poor password selection choices from the victims, with 30.27% of them picking low-complexity passwords and 58.23% reusing leaked passwords. Additionally, more than 10% exhibit strong persistence in re-victimisation by posting again to the phishing platforms of the same phishers. Finally, we reveal many correlations regarding demographics and the time periods when victims are more vulnerable during the day, as well as analyse the sentiment, emotion, and tone of text responses that they submitted, illustrating how convinced they were of the scam.
-                                </div>
-                                <div id="bibtex-phishing" class="bibtex" style="display:none; border-left-color:#007bff;">
-                                    @article{chrysanthou2024anatomy,<br>
-                                    title={The anatomy of deception: Measuring technical and human factors of a large-scale phishing campaign},<br>
-                                    author={Chrysanthou, Anargyros and Pantis, Yorgos and Patsakis, Constantinos},<br>
-                                    journal={Computers & Security},<br>
-                                    volume={140},<br>
-                                    pages={103780},<br>
-                                    year={2024},<br>
-                                    publisher={Elsevier}<br>
-                                    }
-                                </div>
-                            </li>
+            <!-- J1 -->
+            <li class="mt-3">
+                <span class="pub-label">J<sub>1</sub></span>
+                <div class="light-bold d-inline">
+                    &nbsp;<em>The Anatomy of Deception: Measuring Technical and Human Factors of a Large-scale Phishing Campaign.</em>
+                </div>
+                <div>Anargyros Chrysanthou, Yorgos Pantis, Constantinos Patsakis. <i>Journal Computers &amp; Security</i>, 2024.
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167404824000816" target="_blank">[Paper]</a>
+                </div>
+                <div class="link-button" onclick="toggleAbstract('abstract-phishing')">Abstract</div>
+                <div class="link-button" onclick="toggleBibtex('bibtex-phishing')">BibTeX</div>
+                <div id="abstract-phishing" class="abstract" style="display:none; border-left-color:#007bff;">
+                    In an era dominated by digital interactions, phishing campaigns have evolved to exploit not just technological vulnerabilities but also human traits. This study takes an unprecedented deep dive into large-scale phishing campaigns aimed at Meta's users, offering a dual perspective on the technical mechanics and human elements involved. Analysing data from over 25,000 victims worldwide, we highlight the nuances of these campaigns, from the intricate techniques deployed by the attackers to the sentiments and behaviours of those targeted. Unlike prior research conducted in controlled environments, this investigation capitalises on the vast, diverse, and genuine data extracted directly from active phishing campaigns, allowing for a more holistic understanding of the drivers, facilitators, and human factors. Through applying advanced computational techniques, including natural language processing and machine learning, this work unveils critical insights into the psyche of victims and the evolving tactics of modern phishers. Our analysis illustrates very poor password selection choices from the victims, with 30.27% of them picking low-complexity passwords and 58.23% reusing leaked passwords. Additionally, more than 10% exhibit strong persistence in re-victimisation by posting again to the phishing platforms of the same phishers. Finally, we reveal many correlations regarding demographics and the time periods when victims are more vulnerable during the day, as well as analyse the sentiment, emotion, and tone of text responses that they submitted, illustrating how convinced they were of the scam.
+                </div>
+                <div id="bibtex-phishing" class="bibtex" style="display:none; border-left-color:#007bff;">
+                    @article{chrysanthou2024anatomy,<br>
+                    title={The anatomy of deception: Measuring technical and human factors of a large-scale phishing campaign},<br>
+                    author={Chrysanthou, Anargyros and Pantis, Yorgos and Patsakis, Constantinos},<br>
+                    journal={Computers & Security},<br>
+                    volume={140},<br>
+                    pages={103780},<br>
+                    year={2024},<br>
+                    publisher={Elsevier}<br>
+                    }
+                </div>
+            </li>
 
-                            <!-- EMNLP 2022 -->
-                            <li>
-                                <div class="light-bold">BERT in Plutarch's Shadows.</div>
-                                <div>Ivan P. Yamshchikov, Alexey Tikhonov, Yorgos Pantis, Charlotte Schubert, Jürgen Jost. <i>Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing (EMNLP 2022)</i>.</div>
-                                <div class="link-button" onclick="toggleAbstract('abstract-plutarch')">Abstract</div>
-                                <div class="link-button" onclick="window.open('https://aclanthology.org/2022.emnlp-main.407/', '_blank')">Paper</div>
-                                <div class="link-button" onclick="window.open('https://huggingface.co/altsoph/bert-base-ancientgreek-uncased', '_blank')">Code</div>
-                                <div class="link-button" onclick="window.open('../files/bips_poster.pdf', '_blank')">Poster</div>
-                                <div class="link-button" onclick="toggleBibtex('bibtex-plutarch')">BibTeX</div>
-                                <div id="abstract-plutarch" class="abstract" style="display:none; border-left-color:#007bff;">
-                                    The extensive surviving corpus of the ancient scholar Plutarch of Chaeronea (ca. 45-120 CE) also contains several texts which, according to current scholarly opinion, did not originate with him and are therefore attributed to an anonymous author Pseudo-Plutarch. These include, in particular, the work Placita Philosophorum (Quotations and Opinions of the Ancient Philosophers), which is extremely important for the history of ancient philosophy. Little is known about the identity of that anonymous author and its relation to other authors from the same period. This paper presents a BERT language model for Ancient Greek. The model discovers previously unknown statistical properties relevant to these literary, philosophical, and historical problems and can shed new light on this authorship question. In particular, the Placita Philosophorum, together with one of the other Pseudo-Plutarch texts, shows similarities with the texts written by authors from an Alexandrian context (2nd/3rd century CE).
-                                </div>
-                                <div id="bibtex-plutarch" class="bibtex" style="display:none; border-left-color:#007bff;">
-                                    @inproceedings{yamshchikov2022bert,<br>
-                                    title={BERT in Plutarch’s Shadows},<br>
-                                    author={Yamshchikov, Ivan and Tikhonov, Alexey and Pantis, Yorgos and Schubert, Charlotte and Jost, J{\"u}rgen},<br>
-                                    booktitle={Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing},<br>
-                                    pages={6071--6080},<br>
-                                    year={2022}<br>
-                                    }
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
+            <!-- C1 -->
+            <li class="mt-3">
+                <span class="pub-label">C<sub>1</sub></span>
+                <div class="light-bold d-inline">
+                    &nbsp;<em>BERT in Plutarch's Shadows.</em>
+                </div>
+                <div>Ivan P. Yamshchikov, Alexey Tikhonov, Yorgos Pantis, Charlotte Schubert, Jürgen Jost. <i>EMNLP 2022</i>.
+                    <a href="https://aclanthology.org/2022.emnlp-main.407/" target="_blank">[Paper]</a>
+                </div>
+                <div class="link-button" onclick="toggleAbstract('abstract-plutarch')">Abstract</div>
+                <div class="link-button" onclick="toggleBibtex('bibtex-plutarch')">BibTeX</div>
+                <div id="abstract-plutarch" class="abstract" style="display:none; border-left-color:#007bff;">
+                    The extensive surviving corpus of the ancient scholar Plutarch of Chaeronea (ca. 45-120 CE) also contains several texts which, according to current scholarly opinion, did not originate with him and are therefore attributed to an anonymous author Pseudo-Plutarch. These include, in particular, the work Placita Philosophorum (Quotations and Opinions of the Ancient Philosophers), which is extremely important for the history of ancient philosophy. Little is known about the identity of that anonymous author and its relation to other authors from the same period. This paper presents a BERT language model for Ancient Greek. The model discovers previously unknown statistical properties relevant to these literary, philosophical, and historical problems and can shed new light on this authorship question. In particular, the Placita Philosophorum, together with one of the other Pseudo-Plutarch texts, shows similarities with the texts written by authors from an Alexandrian context (2nd/3rd century CE).
+                </div>
+                <div id="bibtex-plutarch" class="bibtex" style="display:none; border-left-color:#007bff;">
+                    @inproceedings{yamshchikov2022bert,<br>
+                    title={BERT in Plutarch’s Shadows},<br>
+                    author={Yamshchikov, Ivan and Tikhonov, Alexey and Pantis, Yorgos and Schubert, Charlotte and Jost, J{\"u}rgen},<br>
+                    booktitle={Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing},<br>
+                    pages={6071--6080},<br>
+                    year={2022}<br>
+                    }
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
                 <!-- Publications Section End -->
             </div>
         </main>
