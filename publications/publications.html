@@ -93,13 +93,11 @@
     </div>
     <div class="link-button" onclick="toggleAbstract('abstract-c3')">Abstract</div>
     <div class="link-button disabled" style="opacity:0.6; cursor:default;">Paper (coming soon)</div>
+    <div class="link-button" onclick="window.open('https://github.com/yorgospantis/StructureDiscovery', '_blank')">Code</div>
     <div class="link-button" onclick="toggleBibtex('bibtex-c3')">BibTeX</div>
 
     <div id="abstract-c3" class="abstract" style="display:none; border-left-color:#007bff;">
-      Understanding the dynamics of feature learning in neural networks (NNs) remains a significant challenge.
-      The work of Mousavi et al. analyzes a multiple index teacher–student setting and shows that a two-layer student attains a low-rank structure in its first-layer weights when trained with stochastic gradient descent (SGD) and a strong regularizer.
-      [...]
-      At the core of our approach is a key <i>derandomization</i> lemma, which states that optimizing the function Eₓ[gθ(Wx + b)] converges to a point where W = 0, under mild conditions.
+      Understanding the dynamics of feature learning in neural networks (NNs) remains a significant challenge. The work of Mousavi et al. analyzes a multiple index teacher–student setting and shows that a two-layer student attains a low-rank structure in its first-layer weights when trained with stochastic gradient descent (SGD) and a strong regularizer. This structural property is known to reduce sample complexity of generalization. Indeed, in a second step, the same authors establish algorithm-specific learning guarantees under additional assumptions. In this paper, we focus exclusively on the structure discovery aspect and study it under weaker assumptions, more specifically: we allow (a) NNs of arbitrary size and depth, (b) with all parameters trainable, (c) under any smooth loss function, (d) tiny regularization, and (e) trained by any method that attains a second-order stationary point (SOSP), e.g., perturbed gradient descent (PGD). At the core of our approach is a key <i>derandomization</i> lemma, which states that optimizing the function E<sub>x</sub>[g<sub>θ</sub>(W x + b)] converges to a point where W = 0, under mild conditions. The fundamental nature of this lemma directly explains structure discovery and has immediate applications in other domains including an end-to-end approximation for MAXCUT, and computing Johnson–Lindenstrauss embeddings.
     </div>
 
     <div id="bibtex-c3" class="bibtex" style="display:none; border-left-color:#007bff;">
@@ -112,8 +110,6 @@
     </div>
   </div>
 </div>
-
-
 
                     <!-- Conference Paper C2† -->
                     <div class="publication">
