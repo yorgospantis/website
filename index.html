@@ -75,14 +75,37 @@
                         </div>
                     </div>
 
-                    <!-- Interactive Visitor Globe (ClustrMaps) -->
-                    <div class="card shadow-sm border-0 p-2" style="background-color: #f8f9fa; border-radius: 12px;">
-                        <h6 class="text-center mb-2"><strong>Visitors around the world 🌍</strong></h6>
-                        <div class="text-center">
-                            <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=ERvRQRegPdPzbRzMZgIVS5zp7PyTfSdXC8wF8gYZgZM"></script>
-                        </div>
-                    </div>
-                </div>
+<!-- Interactive Visitor Globe (ClustrMaps) -->
+<div class="card shadow-sm border-0 p-2" style="background-color: #f8f9fa; border-radius: 12px;">
+    <h6 class="text-center mb-2">
+        <strong><span id="visitor-count">Visitors around the world</span></strong>
+    </h6>
+    <div class="text-center">
+        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=ERvRQRegPdPzbRzMZgIVS5zp7PyTfSdXC8wF8gYZgZM"></script>
+    </div>
+</div>
+
+<script>
+(async () => {
+  try {
+    // Try fetching live data from ClustrMaps (only works if endpoint is public)
+    const res = await fetch("https://clustrmaps.com/map_v2.json?d=ERvRQRegPdPzbRzMZgIVS5zp7PyTfSdXC8wF8gYZgZM");
+    if (!res.ok) throw new Error("Network response not ok");
+    const data = await res.json();
+    const total = data.total || data.hits || data.visitors;
+    if (total) {
+      document.getElementById("visitor-count").textContent = `${total.toLocaleString()} visitors around the world 🌍`;
+    } else {
+      document.getElementById("visitor-count").textContent = "Visitors around the world 🌍";
+    }
+  } catch (e) {
+    // Fallback if ClustrMaps blocks JSON access
+    document.getElementById("visitor-count").textContent = "Visitors around the world 🌍";
+  }
+})();
+</script>
+
+
 
                 <!-- Right column -->
                 <div class="col-sm-8">
