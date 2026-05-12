@@ -20,6 +20,53 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts.js"></script>
+
+    <style>
+        /* Greek name hover effect */
+        #name-text {
+            display: inline-block;
+            position: relative;
+        }
+
+        .name-en,
+        .name-gr {
+            display: block;
+            transition: opacity 0.35s ease, transform 0.35s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            white-space: nowrap;
+        }
+
+        /* The English name is visible by default */
+        .name-en {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* The Greek name is hidden by default */
+        .name-gr {
+            opacity: 0;
+            transform: translateY(6px);
+        }
+
+        /* On hover: fade out English, fade in Greek */
+        #name-item:hover .name-en {
+            opacity: 0;
+            transform: translateY(-6px);
+        }
+
+        #name-item:hover .name-gr {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Spacer span to preserve the width of the navbar brand */
+        .name-spacer {
+            visibility: hidden;
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,7 +80,12 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <a class="navbar-brand me-auto order-0 fancy-button" href="index.html" id="name-item">
-                        <span id="name-text">Yorgos Pantis</span>
+                        <span id="name-text">
+                            <!-- Spacer keeps the element width stable -->
+                            <span class="name-spacer">Yorgos Pantis</span>
+                            <span class="name-en">Yorgos Pantis</span>
+                            <span class="name-gr">Γιώργος Παντής</span>
+                        </span>
                     </a>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0 order-1">
