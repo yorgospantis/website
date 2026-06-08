@@ -102,10 +102,12 @@ a {
     border-radius: 12px;
 }
 
-/* News panel: scrollable list with a tidy custom scrollbar */
+/* News panel: scrollable list with a tidy custom scrollbar.
+   The scroll lives on this inner wrapper so the "News" title stays fixed. */
 .news-card {
-    max-height: 250px;
+    max-height: 220px;
     overflow-y: auto;
+    padding-right: 6px;
 }
 
 .news-card ul {
