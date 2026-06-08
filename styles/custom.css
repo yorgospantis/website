@@ -76,6 +76,16 @@ html {
     transform: scale(1.15);
 }
 
+/* Social icon row under the portrait */
+.social-links a {
+    color: #495057;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
 a {
     text-decoration: none !important;  /* Remove underline from all links */
 }
@@ -86,47 +96,49 @@ a {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-#news {
+/* Reusable light-grey rounded panel (bio, news, study/experience cards) */
+.soft-card {
     background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 1px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
 }
 
-#ID_news {
-    font-family: 'Arial', sans-serif;
-    color: #343a40;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-.news-list {
-    max-height: 200px;
+/* News panel: scrollable list with a tidy custom scrollbar */
+.news-card {
+    max-height: 250px;
     overflow-y: auto;
-    padding-right: 15px;
 }
 
-.news-list ul {
-    list-style: none;
-    padding-left: 0;
+.news-card ul {
+    list-style-type: disc;
+    margin-left: 0;
 }
 
-.news-list li {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    transition: background-color 0.3s, transform 0.2s;
+.news-card li {
+    margin-bottom: 8px;
+    line-height: 1.45;
 }
 
-.news-list li:hover {
-    background-color: #e9ecef;
-    transform: translateX(5px);
+.news-card::-webkit-scrollbar {
+    width: 8px;
 }
 
-.news-list li i {
-    color: #6c757d;
+.news-card::-webkit-scrollbar-thumb {
+    background-color: #ced4da;
+    border-radius: 8px;
+}
+
+.news-card::-webkit-scrollbar-thumb:hover {
+    background-color: #adb5bd;
+}
+
+/* Logo tiles in the study/experience grids lift slightly on hover */
+.logo-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.logo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12) !important;
 }
 
 .light-bold {
