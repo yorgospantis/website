@@ -2,7 +2,7 @@
 //  Site-wide footer date.
 //  Edit ONLY this line to update "Last Update: ..." on every page at once.
 // ============================================================================
-const LAST_UPDATE = "Jan. 2026";
+const LAST_UPDATE = "Jul. 2026";
 
 document.addEventListener("DOMContentLoaded", function () {
     // Fill the footer date on every page.
