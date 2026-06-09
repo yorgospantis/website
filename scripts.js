@@ -12,7 +12,99 @@ document.addEventListener("DOMContentLoaded", function () {
 
     highlightCurrentNav();
     setupScrollToTop();
+    setupScrollReveal();
+    setupBibtexCopy();
 });
+
+// Fade-and-rise reveal for content as it scrolls into view.
+function setupScrollReveal() {
+    if (!("IntersectionObserver" in window)) return;
+    const pubs = document.querySelectorAll(".publication");
+    const targets = pubs.length ? pubs : document.querySelectorAll("#main > .row > *");
+    if (!targets.length) return;
+
+    targets.forEach(function (el) {
+        el.classList.add("reveal");
+    });
+
+    const observer = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
+
+    targets.forEach(function (el) {
+        observer.observe(el);
+    });
+}
+
+// Add a "Copy" button to every BibTeX block.
+function setupBibtexCopy() {
+    document.querySelectorAll(".bibtex").forEach(function (block) {
+        const sourceHTML = block.innerHTML; // capture before injecting the button
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "copy-bibtex";
+        btn.textContent = "Copy";
+
+        btn.addEventListener("click", function () {
+            copyText(bibtexToText(sourceHTML)).then(function () {
+                flashButton(btn, "Copied!", "copied");
+            }).catch(function () {
+                flashButton(btn, "Copy failed", "");
+            });
+        });
+
+        block.insertBefore(btn, block.firstChild);
+    });
+}
+
+// Convert a BibTeX block's HTML into clean multi-line text.
+function bibtexToText(html) {
+    const tmp = document.createElement("div");
+    tmp.innerHTML = html.replace(/<br\s*\/?>/gi, "\n");
+    return tmp.textContent
+        .split("\n")
+        .map(function (line) { return line.trim(); })
+        .filter(function (line) { return line.length; })
+        .join("\n");
+}
+
+// Copy text to the clipboard, with a fallback for non-secure contexts.
+function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function (resolve, reject) {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+            document.execCommand("copy");
+            resolve();
+        } catch (err) {
+            reject(err);
+        } finally {
+            document.body.removeChild(ta);
+        }
+    });
+}
+
+// Briefly change a button's label, then restore it.
+function flashButton(btn, message, extraClass) {
+    btn.textContent = message;
+    if (extraClass) btn.classList.add(extraClass);
+    setTimeout(function () {
+        btn.textContent = "Copy";
+        if (extraClass) btn.classList.remove(extraClass);
+    }, 1500);
+}
 
 // Underline the navbar link that points to the page we're currently on.
 function highlightCurrentNav() {

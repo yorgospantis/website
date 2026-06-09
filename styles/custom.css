@@ -283,3 +283,81 @@ a {
     font-size: 1.1rem;
 }
 
+/* Scroll-reveal: elements fade and rise into view (added by scripts.js) */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.in-view {
+    opacity: 1;
+    transform: none;
+}
+
+/* Publication entries behave like interactive cards */
+.publication {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.publication:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+    transform: translateY(-3px);
+}
+
+/* "Copy" button injected into each BibTeX block */
+.bibtex {
+    position: relative;
+    padding-top: 40px;
+}
+
+.copy-bibtex {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: 1px solid #007bff;
+    background: #ffffff;
+    color: #007bff;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 0.75rem;
+    padding: 2px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.copy-bibtex:hover {
+    background: #007bff;
+    color: #ffffff;
+}
+
+.copy-bibtex.copied {
+    background: #28a745;
+    border-color: #28a745;
+    color: #ffffff;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .publication:hover,
+    .logo-card:hover,
+    #scroll-top:hover {
+        transform: none;
+    }
+}
+
