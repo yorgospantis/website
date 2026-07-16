@@ -144,6 +144,19 @@ a {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* Fixed-height slot so logos of differing heights share one centre line. */
+.logo-card .logo-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    margin-bottom: 0.5rem;
+}
+
+.logo-card .logo-slot img {
+    max-width: 100%;
+}
+
 .logo-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12) !important;
