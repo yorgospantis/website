@@ -214,6 +214,85 @@ a {
     transform: translateY(-2px);
 }
 
+/* Outline variant of the pill button (e.g. the CV button in the banner) */
+.link-button.ghost {
+    background-color: #ffffff;
+    color: #007bff;
+    border: 1.5px solid #007bff;
+    box-shadow: none;
+}
+
+.link-button.ghost:hover {
+    background-color: #eaf3ff;
+    color: #0056b3;
+}
+
+/* "Open to opportunities" accent banner on the home page */
+.intern-banner {
+    position: relative;
+    background: linear-gradient(180deg, #f3f8ff 0%, #eaf3ff 100%);
+    border: 1px solid #d4e6ff;
+    border-left: 5px solid #007bff;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 0.5rem 0 1.25rem;
+}
+
+.intern-banner h5 {
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.intern-banner p {
+    margin-bottom: 12px;
+    color: #3a3f45;
+    line-height: 1.55;
+}
+
+/* Keep the inline icon in step with the button text, not the 2em global */
+.intern-banner .link-button .fas {
+    font-size: 1em;
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #e4f6ec;
+    color: #1a7f45;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding: 3px 11px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #23c067;
+    display: inline-block;
+    box-shadow: 0 0 0 0 rgba(35, 192, 103, 0.6);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(35, 192, 103, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px rgba(35, 192, 103, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(35, 192, 103, 0);
+    }
+}
+
 .bibtex, .abstract {
     background-color: #f0f0f0;
     padding: 20px;
